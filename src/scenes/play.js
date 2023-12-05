@@ -19,6 +19,14 @@ class Play extends Phaser.Scene {
       .image(325, 500, "doesnt matter", null, { isStatic: true })
       .setScale(200000, 3); //adding secret table to catch stray boxes and delete them
 
+    this.collisionWall1 = this.matter.add
+      .image(1500, 500, "doesnt matter", null, { isStatic: true })
+      .setScale(3, 200000); //adding secret table to catch stray boxes and delete them
+
+    this.collisionWall2 = this.matter.add
+      .image(-700, 500, "doesnt matter", null, { isStatic: true })
+      .setScale(3, 200000); //adding secret table to catch stray boxes and delete them
+
     this.tube = this.matter.add
       .image(100, 0, "tube", null, { isStatic: true })
       .setScale(3, 10); //adding tube letters fall out of
